@@ -25,7 +25,7 @@ What are the different filtration strategies?
 This filtration strategy is based on the data provided about the items. The algorithm recommends products that are similar to the ones that a user has liked in the past. This similarity (generally cosine similarity) is computed from the data we have about the items as well as the user’s past preferences.
 For example, if a user likes movies such as ‘The Prestige’ then we can recommend him the movies of ‘Christian Bale’ or movies with the genre ‘Thriller’ or maybe even movies directed by ‘Christopher Nolan’.So what happens here the recommendation system checks the past preferences of the user and find the film “The Prestige”, then tries to find similar movies to that using the information available in the database such as the lead actors, the director, genre of the film, production house, etc and based on this information find movies similar to “The Prestige”.
 
-**Disadvantages**\
+**Disadvantages**
 1) Different products do not get much exposure to the user.
 2) Businesses cannot be expanded as the user does not try different types of products.
 ---
@@ -69,7 +69,7 @@ Cosine similarity is a metric used to measure how similar the two items or docum
 
 Mathematically, the cosine of the angle of between two vectors is derived from the dot product of the two vectors divided by the product of the two vectors’ magnitude.\
 
-![image5](https://user-images.githubusercontent.com/69259443/117536113-e274b300-b016-11eb-9002-3f3c815007a5.png)\
+![image5](https://user-images.githubusercontent.com/69259443/117536113-e274b300-b016-11eb-9002-3f3c815007a5.png)
 
 Since we are finding the cosine of two vectors the output will always range from -1 to 1, where -1 shows that two items are dissimilar and 1 shows that two items are completely similar.
 
