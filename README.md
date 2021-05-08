@@ -23,7 +23,7 @@ What are the different filtration strategies?
 
 **1) Content-based Filtering**\
 This filtration strategy is based on the data provided about the items. The algorithm recommends products that are similar to the ones that a user has liked in the past. This similarity (generally cosine similarity) is computed from the data we have about the items as well as the user’s past preferences.
-For example, if a user likes movies such as ‘The Prestige’ then we can recommend him the movies of ‘Christian Bale’ or movies with the genre ‘Thriller’ or maybe even movies directed by ‘Christopher Nolan’.So what happens here the recommendation system checks the past preferences of the user and find the film “The Prestige”, then tries to find similar movies to that using the information available in the database such as the lead actors, the director, genre of the film, production house, etc and based on this information find movies similar to “The Prestige”.
+For example, if a user likes movies such as ‘The Prestige’ then we can recommend him the movies of ‘Christian Bale’ or movies with the genre ‘Thriller’ or maybe even movies directed by ‘Christopher Nolan’.So what happens here, the recommendation system checks the past preferences of the user and find the film “The Prestige”, then tries to find similar movies to that using the information available in the database such as the lead actors, the director, genre of the film, production house, etc and based on this information find movies similar to “The Prestige”.
 
 **Disadvantages**
 1) Different products do not get much exposure to the user.
@@ -42,16 +42,16 @@ There are 2 types of collaborative filtering algorithms:
        **Disadvantages**\
          a) People are fickle-minded i.e their taste change from time to time and as this algorithm is based on user similarity it may pick up initial similarity                 patterns between 2 users who after a while may have completely different preferences.\
          b) There are many more users than items therefore it becomes very difficult to maintain such large matrices and therefore needs to be recomputed very      regularly.\
-         c) This algorithm is very susceptible to shilling attacks where fake users profiles consisting of biased preference patterns are used to manipulate key   decisions.\
+         c) This algorithm is very susceptible to shilling attacks where fake users profiles consisting of biased preference patterns are used to manipulate key   decisions.
 
    * **Item-based Collaborative Filtering**\
        The concept in this case is to find similar movies instead of similar users and then recommending similar movies to that ‘A’ has had in his/her past                  preferences. This is executed by finding every pair of items that were rated/viewed/liked/clicked by the same user, then measuring the similarity of those            rated/viewed/liked/clicked across all user who rated/viewed/liked/clicked both, and finally recommending them based on similarity scores.\
-       Here, for example, we take 2 movies ‘A’ and ‘B’ and check their ratings by all users who have rated both the movies and based on the similarity of these              ratings, and based on this rating similarity by users who have rated both we find similar movies. So if most common users have rated ‘A’ and ‘B’ both similarly        and it is highly probable that ‘A’ and ‘B’ are similar, therefore if someone has watched and liked ‘A’ they should be recommended ‘B’ and vice versa.\
+       Here, for example, we take 2 movies ‘A’ and ‘B’ and check their ratings by all users who have rated both the movies and based on the similarity of these              ratings, and based on this rating similarity by users who have rated both we find similar movies. So if most common users have rated ‘A’ and ‘B’ both similarly        and it is highly probable that ‘A’ and ‘B’ are similar, therefore if someone has watched and liked ‘A’ they should be recommended ‘B’ and vice versa.
 
        **Advantages over User-based Collaborative Filtering**\
          a)Unlike people’s taste, movies don’t change.\
          b)There are usually a lot fewer items than people, therefore easier to maintain and compute the matrices.\
-         c)Shilling attacks are much harder because items cannot be faked.\
+         c)Shilling attacks are much harder because items cannot be faked.
 
 **This project aims to find top 20 similar movies the user is expected to watch given his current movie choice. The project takes into account both content and collaborative base filtering and creates an option for hybrid filtering which is the average of both.** 
 
@@ -65,9 +65,9 @@ Being someone who used spend a lot of time on social media, I often wondered how
 ## Technical Aspects
 
 * **Cosine similarity**\
-Cosine similarity is a metric used to measure how similar the two items or documents are irrespective of their size. It measures the cosine of an angle between two vectors projected in multi-dimensional space. This allows us to measure the similarity of a document of any type. Due to a multi-dimensional array, any number of variables (which are treated as dimensions) can be used, which in turn supports large sized documents\
+Cosine similarity is a metric used to measure how similar the two items or documents are irrespective of their size. It measures the cosine of an angle between two vectors projected in multi-dimensional space. This allows us to measure the similarity of a document of any type. Due to a multi-dimensional array, any number of variables (which are treated as dimensions) can be used, which in turn supports large sized documents.
 
-Mathematically, the cosine of the angle of between two vectors is derived from the dot product of the two vectors divided by the product of the two vectors’ magnitude.\
+Mathematically, the cosine of the angle of between two vectors is derived from the dot product of the two vectors divided by the product of the two vectors’ magnitude.
 
 ![image5](https://user-images.githubusercontent.com/69259443/117536113-e274b300-b016-11eb-9002-3f3c815007a5.png)
 
